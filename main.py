@@ -1,15 +1,11 @@
 import sys
-import terminal as ter
-import logger as log
-
-
+from modules import terminal as ter_ui, logger as log_util
 
 if __name__ == '__main__':
-    log=log.get_logger()
+    log = log_util.get_logger()
     if len(sys.argv) > 1:
         if bool(sys.argv[1]):
-            ter.terminal_run_ui()
-            log.debug("TUI started")
+            ter_ui.terminal_run_ui()
+            log.info("TUI started")
     else:
-        log.debug("TUI not started")
-
+        log.info("TUI not started")
