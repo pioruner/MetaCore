@@ -1,6 +1,8 @@
 import sys
 from modules import terminal as ter_ui, logger as log_util
 
+
+
 if __name__ == '__main__':
     log = log_util.get_logger()
     if len(sys.argv) > 1:
